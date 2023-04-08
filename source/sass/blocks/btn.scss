@@ -22,3 +22,52 @@
     opacity: 0.8;
   }
 }
+
+.btn--burger {
+  display: none;
+  position: relative;
+  padding: 0;
+  width: 24px;
+  height: 12px;
+  background-color: $color-transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-default-white;
+    box-shadow: 0 5px 0 0 $color-default-white, 0 10px 0 0 $color-default-white;
+  }
+
+  .main-header.is-open & {
+    width: 13px;
+    height: 13px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      width: 16px;
+      height: 2px;
+      background-color: $color-default-black;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}

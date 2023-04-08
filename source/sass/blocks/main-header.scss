@@ -1,0 +1,130 @@
+.main-header {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  min-height: 108px;
+
+  @include vp-1023 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 62px;
+
+    &.is-open {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: calc(100vw - 35px);
+    }
+  }
+}
+
+.main-header__wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__logo-link {
+  display: block;
+}
+
+.main-header__logo {
+  display: block;
+  fill: $color-default-white;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+
+  .main-header.is-open & {
+    fill: $color-default-black;
+  }
+}
+
+.main-header__nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 595px;
+  gap: 15px 33px;
+
+  @include vp-1023 {
+    gap: 15px 23px;
+  }
+
+  @include vp-767 {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 30px 30px 15px;
+    margin-top: 75px;
+    gap: 10px;
+    flex-wrap: nowrap;
+    max-height: 100vh;
+    overflow-y: auto;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
+  }
+
+  & a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-default-white;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-default-black;
+      padding: 10px 10px 8px;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.main-header__overlay {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 43, 102, 0.5);
+  display: none;
+
+  .main-header.is-open & {
+    display: block;
+  }
+}

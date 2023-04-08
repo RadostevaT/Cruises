@@ -20,8 +20,24 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="main-header" data-header>
+      <div class="main-header__wrapper container">
+        <a class="main-header__logo-link" href="#" aria-label="Логотип компании и ссылка на главную страницу.">
+          <svg class="main-header__logo" width="70" height="38">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="main-header__nav">
+          <a href="#">Преимущества</a>
+          <a href="#">Направления</a>
+          <a href="#">Ближайшие круизы</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <button class="btn btn--burger" type="button" aria-label="Переключатель отображения меню" data-burger>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <div class="main-header__overlay" data-overlay></div>
+      </div>
     </header>
     <main>
     </main>
