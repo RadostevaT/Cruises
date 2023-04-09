@@ -10,6 +10,7 @@
 
   @include vp-1023 {
     padding-top: 90px;
+    padding-bottom: 100px;
 
     @include retina-bg($bg: "advantages-tablet");
   }

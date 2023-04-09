@@ -1275,6 +1275,128 @@ button,
   line-height: 20px;
 }
 
+.catalog__wrapper {
+  max-width: 1230px;
+  padding-top: 85px;
+  padding-bottom: 120px;
+}
+
+.catalog__wrapper h2 {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 49px;
+}
+
+.catalog__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.catalog__item {
+  position: relative;
+  height: 386px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.catalog__item h3 {
+  position: absolute;
+  margin: 0;
+  color: #f9fbfd;
+  bottom: 22px;
+  left: 0px;
+  padding: 29px 25px 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.catalog__item img {
+  height: 386px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.catalog__item.focus-visible:focus {
+  background-color: #011c40;
+}
+
+.catalog__item.focus-visible:focus img {
+  display: none;
+}
+
+.catalog__item.focus-visible:focus .catalog__item-desc {
+  display: block;
+}
+
+.catalog__item.focus-visible:focus h3 {
+  position: static;
+}
+
+.catalog__item.focus-visible:focus .catalog__button {
+  display: block;
+}
+
+.catalog__item-desc {
+  display: none;
+  color: #f9fbfd;
+  padding: 13px 25px 14px;
+  max-height: 255px;
+  overflow-y: scroll;
+  margin-bottom: auto;
+  scrollbar-width: none;
+}
+
+.catalog__item-desc::-webkit-scrollbar {
+  display: none;
+}
+
+.catalog__item-desc b {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.catalog__item-desc p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d8d8d9;
+}
+
+.catalog__item-desc p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.catalog__button {
+  display: none;
+  width: auto;
+  text-align: center;
+  background-color: #f9fbfd;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  padding: 9px 20px;
+  margin: 0 25px 35px;
+}
+
+.catalog__button.focus-visible:focus {
+  opacity: 0.8;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1430,6 +1552,7 @@ button,
 
   .advantages {
     padding-top: 90px;
+    padding-bottom: 100px;
   }
 
 @supports not (background-image: url("./../img/advantages-tablet.webp")) {
@@ -1459,6 +1582,33 @@ button,
 
   .advantages__item svg {
     height: 26px;
+  }
+
+  .catalog__wrapper {
+    padding: 90px 60px 100px;
+  }
+
+  .catalog__wrapper h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .catalog__item h3 {
+    bottom: 27px;
+    padding: 29px 35px 0;
+  }
+
+  .catalog__item-desc {
+    padding: 13px 35px 14px;
+  }
+
+  .catalog__button {
+    margin: 0 35px 35px;
   }
 }
 
@@ -1678,6 +1828,34 @@ button,
     max-width: 170px;
     margin-bottom: 3px;
   }
+
+  .catalog__wrapper {
+    padding: 57px 25px 65px;
+  }
+
+  .catalog__wrapper h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .catalog__item h3 {
+    bottom: 17px;
+    padding: 29px 25px 0;
+  }
+
+  .catalog__item-desc {
+    padding: 13px 25px 14px;
+  }
+
+  .catalog__button {
+    margin: 0 25px 35px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1762,6 +1940,30 @@ button,
   }
 
   .main-footer__socials a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .catalog__item:hover:not(.focus-visible) {
+    background-color: #011c40;
+  }
+
+  .catalog__item:hover:not(.focus-visible) img {
+    display: none;
+  }
+
+  .catalog__item:hover:not(.focus-visible) .catalog__item-desc {
+    display: block;
+  }
+
+  .catalog__item:hover:not(.focus-visible) h3 {
+    position: static;
+  }
+
+  .catalog__item:hover:not(.focus-visible) .catalog__button {
+    display: block;
+  }
+
+  .catalog__button:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }
