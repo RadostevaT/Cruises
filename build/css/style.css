@@ -949,7 +949,6 @@ button,
 
 .main-header__wrapper {
   max-width: 1260px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1004,7 +1003,7 @@ button,
   position: absolute;
   top: 0;
   left: -35px;
-  width: 100%;
+  width: 35px;
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 43, 102, 0.5);
@@ -1013,6 +1012,95 @@ button,
 
 .main-header.is-open .main-header__overlay {
   display: block;
+}
+
+.main-footer {
+  background-color: #011c40;
+  min-height: 138px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.main-footer__wrapper {
+  max-width: 1260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-footer__logo-link {
+  display: block;
+}
+
+.main-footer__logo-link.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.main-footer__logo {
+  display: block;
+  fill: #f9fbfd;
+}
+
+.main-footer__nav {
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 595px;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-footer__nav a {
+  color: #f9fbfd;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-footer__nav a.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.main-footer__socials {
+  margin-left: auto;
+  width: 100%;
+  max-width: 106px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px 27px;
+}
+
+.main-footer__socials a.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.main-footer__socials svg {
+  fill: #f9fbfd;
 }
 
 /* @mixin hover-focus {
@@ -1080,6 +1168,35 @@ button,
     font-size: 14px;
     line-height: 17px;
   }
+
+  .main-footer {
+    min-height: 120px;
+  }
+
+  .main-footer__logo {
+    width: 38px;
+    height: 20px;
+  }
+
+  .main-footer__nav {
+    max-width: 440px;
+  }
+
+  .main-footer__nav a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .main-footer__socials {
+    -webkit-column-gap: 22px;
+    -moz-column-gap: 22px;
+    column-gap: 22px;
+  }
+
+  .main-footer__socials svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1099,6 +1216,8 @@ button,
 
   .main-header.is-open {
     position: absolute;
+    background-color: #f9fbfd;
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1145,6 +1264,50 @@ button,
     padding: 10px 10px 8px;
     width: 100%;
     display: block;
+  }
+
+  .main-footer {
+    min-height: 283px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main-footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .main-footer__logo-link {
+    margin-bottom: 30px;
+  }
+
+  .main-footer__logo {
+    width: 42px;
+    height: 22px;
+  }
+
+  .main-footer__nav {
+    max-width: none;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .main-footer__socials {
+    margin-left: 0;
+    max-width: none;
   }
 }
 
@@ -1196,6 +1359,18 @@ button,
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .main-footer__logo-link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .main-footer__nav a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .main-footer__socials a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }
