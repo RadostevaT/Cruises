@@ -329,7 +329,7 @@
             <h2>Раннее бронирование</h2>
             <p>Забронируйте тур<br class="form__br--mobile">за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
-          <div class="form__inner" data-form-validate>
+          <div class="form__inner" data-form-validate data-callback="base">
             <form class="form__container" action="https://echo.htmlacademy.ru/" method="POST">
               <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
@@ -352,7 +352,7 @@
               </div>
               <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
                 <label>
-                  <input type="checkbox" value="user-agreement-1" name="user-agreement" aria-invalid="true">
+                  <input type="checkbox" value="true" name="user-agreement" aria-invalid="true">
                   <span class="custom-toggle__icon"></span>
                   <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
                 </label>
