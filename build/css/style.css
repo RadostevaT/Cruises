@@ -751,6 +751,41 @@ button,
   transition: border 0.3s ease;
 }
 
+.custom-input label input::-webkit-input-placeholder,
+.custom-input label textarea::-webkit-input-placeholder,
+.custom-textarea label input::-webkit-input-placeholder,
+.custom-textarea label textarea::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.custom-input label input::-moz-placeholder,
+.custom-input label textarea::-moz-placeholder,
+.custom-textarea label input::-moz-placeholder,
+.custom-textarea label textarea::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.custom-input label input:-ms-input-placeholder,
+.custom-input label textarea:-ms-input-placeholder,
+.custom-textarea label input:-ms-input-placeholder,
+.custom-textarea label textarea:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.custom-input label input::-ms-input-placeholder,
+.custom-input label textarea::-ms-input-placeholder,
+.custom-textarea label input::-ms-input-placeholder,
+.custom-textarea label textarea::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.custom-input label input::placeholder,
+.custom-input label textarea::placeholder,
+.custom-textarea label input::placeholder,
+.custom-textarea label textarea::placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
 .custom-input label input.focus-visible:focus,
 .custom-input label textarea.focus-visible:focus,
 .custom-textarea label input.focus-visible:focus,
@@ -843,9 +878,8 @@ button,
   cursor: pointer;
 }
 
-.custom-toggle label span {
-  margin-bottom: 0;
-  margin-left: 0;
+.custom-toggle label .custom-toggle__label {
+  display: block;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon {
@@ -867,14 +901,14 @@ button,
   top: 50%;
   left: 50%;
   width: 10px;
-  height: 6px;
+  height: 9px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .custom-toggle input:checked + .custom-toggle__icon::before {
-  background-image: url("./../img/svg/form-tick.svg");
+  background: url("./../img/svg/form-tick.svg") no-repeat;
 }
 
 .custom-toggle.is-invalid label span {
@@ -1419,6 +1453,10 @@ button,
   margin-bottom: 27px;
 }
 
+.form__br--mobile {
+  display: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1748,6 +1786,25 @@ button,
     bottom: 20px;
   }
 
+  .custom-toggle {
+    line-height: 12px;
+    margin-bottom: 25px;
+  }
+
+  .custom-toggle label {
+    padding-left: 28px;
+  }
+
+  .custom-toggle label .custom-toggle__label {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .custom-toggle--checkbox .custom-toggle__icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .main-header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1957,6 +2014,53 @@ button,
   .catalog__button {
     margin: 0 25px 35px;
   }
+
+@supports not (background-image: url("./../img/form-background-mobile.webp")) {
+    .form {
+      background-image: url("./../img/${bg}.@{ext}");
+    }
+}
+
+@supports (background-image: url("./../img/form-background-mobile.webp")) {
+    .form {
+      background-image: url("./../img/form-background-mobile.webp");
+    }
+}
+
+  .form__wrapper {
+    padding-top: 59px;
+    padding-bottom: 65px;
+  }
+
+  .form__title {
+    margin-bottom: 34px;
+  }
+
+  .form__title h2 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 14px;
+  }
+
+  .form__title p {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form__inner {
+    padding: 35px 30px 40px;
+  }
+
+  .form__container h3 {
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 28px;
+  }
+
+  .form__br--mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
@@ -1969,6 +2073,18 @@ button,
 @supports (background-image: url("./../img/advantages-mobile@2x.webp")) {
     .advantages {
       background-image: url("./../img/advantages-mobile@2x.webp");
+    }
+}
+
+@supports not (background-image: url("./../img/form-background-mobile@2x.webp")) {
+    .form {
+      background-image: url("./../img/form-background-mobile@2x.@{ext}");
+    }
+}
+
+@supports (background-image: url("./../img/form-background-mobile@2x.webp")) {
+    .form {
+      background-image: url("./../img/form-background-mobile@2x.webp");
     }
 }
 }

@@ -8,6 +8,11 @@
 
   display: flex;
 
+  @include vp-767 {
+    line-height: 12px;
+    margin-bottom: 25px;
+  }
+
   input {
     position: absolute;
 
@@ -25,9 +30,17 @@
 
     cursor: pointer;
 
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
+    @include vp-767 {
+      padding-left: 28px;
+    }
+
+    .custom-toggle__label {
+      display: block;
+
+      @include vp-767 {
+        max-width: 150px;
+        width: 100%;
+      }
     }
   }
 
@@ -52,16 +65,21 @@
         left: 50%;
 
         width: 10px;
-        height: 6px;
+        height: 9px;
 
         transform: translate(-50%, -50%);
+      }
+
+      @include vp-767 {
+        width: 20px;
+        height: 20px;
       }
     }
   }
 
   input:checked + .custom-toggle__icon {
     &::before {
-      background-image: url("./../img/svg/form-tick.svg");
+      background: url("./../img/svg/form-tick.svg") no-repeat;
     }
   }
 
