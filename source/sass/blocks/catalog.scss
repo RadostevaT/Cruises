@@ -57,7 +57,7 @@
     margin: 0;
     color: $color-default-white;
     bottom: 22px;
-    left: 0px;
+    left: 0;
     padding: 29px 25px 0;
     font-size: 18px;
     line-height: 27px;
@@ -93,7 +93,6 @@
 
     & h3 {
       position: static;
-
     }
 
     & .catalog__button {

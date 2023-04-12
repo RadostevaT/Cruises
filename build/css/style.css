@@ -1060,9 +1060,7 @@ button,
   flex-wrap: wrap;
   max-width: 595px;
   width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  gap: 10px 33px;
 }
 
 .main-footer__nav a {
@@ -1111,8 +1109,8 @@ button,
   padding-top: 269px;
   padding-bottom: 275px;
   border: 1px solid #1f5c95;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 @supports not (background-image: url("./../img/main-background.webp")) {
@@ -1138,7 +1136,7 @@ button,
   margin-bottom: 12px;
   font-size: 54px;
   line-height: 66px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .intro__wrapper h2 {
@@ -1147,7 +1145,7 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .journey__wrapper {
@@ -1192,7 +1190,7 @@ button,
 }
 
 .advantages {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -1200,15 +1198,15 @@ button,
   padding-bottom: 120px;
 }
 
-@supports not (background-image: url("./../img/advantages-desktop.webp")) {
+@supports not (background-image: url("./../img/advantages.webp")) {
   .advantages {
     background-image: url("./../img/${bg}.@{ext}");
   }
 }
 
-@supports (background-image: url("./../img/advantages-desktop.webp")) {
+@supports (background-image: url("./../img/advantages.webp")) {
   .advantages {
-    background-image: url("./../img/advantages-desktop.webp");
+    background-image: url("./../img/advantages.webp");
   }
 }
 
@@ -1303,7 +1301,7 @@ button,
   margin: 0;
   color: #f9fbfd;
   bottom: 22px;
-  left: 0px;
+  left: 0;
   padding: 29px 25px 0;
   font-size: 18px;
   line-height: 27px;
@@ -1386,7 +1384,7 @@ button,
 }
 
 .form {
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -1440,8 +1438,8 @@ button,
   margin-left: auto;
   padding: 44px 50px 49px;
   background-color: #011c40;
-  -webkit-box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .form__container h3 {
@@ -1473,7 +1471,24 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 115px;
+  padding-bottom: 120px;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 306px;
+}
+
+@supports not (background-image: url("./../img/map.webp")) {
+  .contacts__map {
+    background-image: url("./../img/${bg}.@{ext}");
+  }
+}
+
+@supports (background-image: url("./../img/map.webp")) {
+  .contacts__map {
+    background-image: url("./../img/map.webp");
+  }
 }
 
 .contacts__br {
@@ -1605,6 +1620,7 @@ button,
   .main-footer__nav {
     max-width: 440px;
     margin-left: 25px;
+    gap: 10px 23px;
   }
 
   .main-footer__nav a {
@@ -1632,18 +1648,6 @@ button,
     padding-top: 269px;
     padding-bottom: 270px;
   }
-
-@supports not (background-image: url("./../img/main-background-tablet.webp")) {
-    .intro {
-      background-image: url("./../img/${bg}.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/main-background-tablet.webp")) {
-    .intro {
-      background-image: url("./../img/main-background-tablet.webp");
-    }
-}
 
   .intro__wrapper h1 {
     font-size: 50px;
@@ -1684,18 +1688,6 @@ button,
     padding-top: 90px;
     padding-bottom: 100px;
   }
-
-@supports not (background-image: url("./../img/advantages-tablet.webp")) {
-    .advantages {
-      background-image: url("./../img/${bg}.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/advantages-tablet.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-tablet.webp");
-    }
-}
 
   .advantages__wrapper h2 {
     font-size: 26px;
@@ -1741,18 +1733,6 @@ button,
     margin: 0 35px 35px;
   }
 
-@supports not (background-image: url("./../img/form-background-tablet.webp")) {
-    .form {
-      background-image: url("./../img/${bg}.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/form-background-tablet.webp")) {
-    .form {
-      background-image: url("./../img/form-background-tablet.webp");
-    }
-}
-
   .form__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1781,7 +1761,12 @@ button,
 
   .contacts__wrapper {
     padding-top: 100px;
-    padding-bottom: 95px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
   }
 
   .contacts__map iframe {
@@ -1804,44 +1789,6 @@ button,
   .contacts__item svg {
     margin-top: 5px;
   }
-}
-
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-@supports not (background-image: url("./../img/main-background-tablet@2x.webp")) {
-    .intro {
-      background-image: url("./../img/main-background-tablet@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/main-background-tablet@2x.webp")) {
-    .intro {
-      background-image: url("./../img/main-background-tablet@2x.webp");
-    }
-}
-
-@supports not (background-image: url("./../img/advantages-tablet@2x.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-tablet@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/advantages-tablet@2x.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-tablet@2x.webp");
-    }
-}
-
-@supports not (background-image: url("./../img/form-background-tablet@2x.webp")) {
-    .form {
-      background-image: url("./../img/form-background-tablet@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/form-background-tablet@2x.webp")) {
-    .form {
-      background-image: url("./../img/form-background-tablet@2x.webp");
-    }
-}
 }
 
 @media (max-width: 767px) {
@@ -2051,18 +1998,6 @@ button,
     padding-bottom: 64px;
   }
 
-@supports not (background-image: url("./../img/advantages-mobile.webp")) {
-    .advantages {
-      background-image: url("./../img/${bg}.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/advantages-mobile.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-mobile.webp");
-    }
-}
-
   .advantages__wrapper h2 {
     font-size: 24px;
     line-height: 36px;
@@ -2111,18 +2046,6 @@ button,
     margin: 0 25px 35px;
   }
 
-@supports not (background-image: url("./../img/form-background-mobile.webp")) {
-    .form {
-      background-image: url("./../img/${bg}.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/form-background-mobile.webp")) {
-    .form {
-      background-image: url("./../img/form-background-mobile.webp");
-    }
-}
-
   .form__wrapper {
     padding-top: 59px;
     padding-bottom: 65px;
@@ -2164,7 +2087,12 @@ button,
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding-top: 59px;
-    padding-bottom: 60px;
+    padding-bottom: 65px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 316px;
   }
 
   .contacts__map iframe {
@@ -2176,32 +2104,6 @@ button,
     margin: 0;
     margin-bottom: 35px;
   }
-}
-
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-@supports not (background-image: url("./../img/advantages-mobile@2x.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-mobile@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/advantages-mobile@2x.webp")) {
-    .advantages {
-      background-image: url("./../img/advantages-mobile@2x.webp");
-    }
-}
-
-@supports not (background-image: url("./../img/form-background-mobile@2x.webp")) {
-    .form {
-      background-image: url("./../img/form-background-mobile@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("./../img/form-background-mobile@2x.webp")) {
-    .form {
-      background-image: url("./../img/form-background-mobile@2x.webp");
-    }
-}
 }
 
 @media (hover: hover) {
@@ -2274,15 +2176,15 @@ button,
     }
 }
 
-@supports not (background-image: url("./../img/advantages-desktop@2x.webp")) {
+@supports not (background-image: url("./../img/advantages@2x.webp")) {
     .advantages {
-      background-image: url("./../img/advantages-desktop@2x.@{ext}");
+      background-image: url("./../img/advantages@2x.@{ext}");
     }
 }
 
-@supports (background-image: url("./../img/advantages-desktop@2x.webp")) {
+@supports (background-image: url("./../img/advantages@2x.webp")) {
     .advantages {
-      background-image: url("./../img/advantages-desktop@2x.webp");
+      background-image: url("./../img/advantages@2x.webp");
     }
 }
 
@@ -2295,6 +2197,18 @@ button,
 @supports (background-image: url("./../img/form-background@2x.webp")) {
     .form {
       background-image: url("./../img/form-background@2x.webp");
+    }
+}
+
+@supports not (background-image: url("./../img/map@2x.webp")) {
+    .contacts__map {
+      background-image: url("./../img/map@2x.@{ext}");
+    }
+}
+
+@supports (background-image: url("./../img/map@2x.webp")) {
+    .contacts__map {
+      background-image: url("./../img/map@2x.webp");
     }
 }
 }

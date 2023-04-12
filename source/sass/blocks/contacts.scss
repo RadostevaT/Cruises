@@ -5,17 +5,33 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 115px;
+  padding-bottom: 120px;
 
   @include vp-1023 {
     padding-top: 100px;
-    padding-bottom: 95px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
     flex-direction: column-reverse;
     padding-top: 59px;
-    padding-bottom: 60px;
+    padding-bottom: 65px;
+  }
+}
+
+.contacts__map {
+  @include retina-bg($bg: "map");
+  width: 560px;
+  height: 306px;
+
+  @include vp-1023 {
+    width: 324px;
+    height: 335px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 316px;
   }
 }
 

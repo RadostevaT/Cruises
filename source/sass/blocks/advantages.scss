@@ -6,20 +6,16 @@
   padding-top: 110px;
   padding-bottom: 120px;
 
-  @include retina-bg($bg: "advantages-desktop");
+  @include retina-bg($bg: "advantages");
 
   @include vp-1023 {
     padding-top: 90px;
     padding-bottom: 100px;
-
-    @include retina-bg($bg: "advantages-tablet");
   }
 
   @include vp-767 {
     padding-top: 57px;
     padding-bottom: 64px;
-
-    @include retina-bg($bg: "advantages-mobile");
   }
 }
 

@@ -61,11 +61,12 @@
   flex-wrap: wrap;
   max-width: 595px;
   width: 100%;
-  justify-content: space-between;
+  gap: 10px 33px;
 
   @include vp-1023 {
     max-width: 440px;
     margin-left: 25px;
+    gap: 10px 23px;
   }
 
   @include vp-767 {
