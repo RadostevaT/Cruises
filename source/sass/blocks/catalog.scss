@@ -4,11 +4,11 @@
   padding-bottom: 120px;
 
   @include vp-1023 {
-    padding: 90px 60px 100px;
+    padding: 90px 60px 99px;
   }
 
   @include vp-767 {
-    padding: 57px 25px 65px;
+    padding: 57px 25px 64px;
   }
 }
 
@@ -34,7 +34,7 @@
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 
   @include vp-1023 {
@@ -52,13 +52,25 @@
   display: flex;
   flex-direction: column;
 
+  @include vp-1023 {
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 1/1.25;
+    min-height: 386px;
+    height: auto;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 1/1.43;
+  }
+
   & h3 {
     position: absolute;
     margin: 0;
     color: $color-default-white;
     bottom: 22px;
     left: 0;
-    padding: 29px 25px 0;
+    padding: 29px 27px 0;
     font-size: 18px;
     line-height: 27px;
     font-weight: 500;
@@ -75,7 +87,7 @@
   }
 
   & img {
-    height: 386px;
+    min-height: 386px;
     width: 100%;
     object-fit: cover;
   }
