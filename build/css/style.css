@@ -1491,6 +1491,10 @@ button,
   }
 }
 
+.contacts__map iframe {
+  border: none;
+}
+
 .contacts__br {
   display: block;
 }
