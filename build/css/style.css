@@ -1279,8 +1279,11 @@ button,
 .catalog__list {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, 260px);
   gap: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .catalog__item {
@@ -1316,6 +1319,8 @@ button,
 
 .catalog__item.focus-visible:focus {
   background-color: #011c40;
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
 
 .catalog__item.focus-visible:focus img {
@@ -2154,6 +2159,8 @@ button,
 
   .catalog__item:hover:not(.focus-visible) {
     background-color: #011c40;
+    -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   }
 
   .catalog__item:hover:not(.focus-visible) img {

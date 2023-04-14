@@ -34,8 +34,9 @@
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, 260px);
   gap: 30px;
+  justify-content: center;
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr;
@@ -94,6 +95,7 @@
 
   @include hover-focus {
     background-color: $color-tangaroa;
+    box-shadow: 0 4px 35px rgba($color-tangaroa, 0.15);
 
     & img {
       display: none;
