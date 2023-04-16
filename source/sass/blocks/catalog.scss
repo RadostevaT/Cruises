@@ -113,6 +113,27 @@
       display: block;
     }
   }
+
+  // &:focus-within {
+  //   background-color: $color-tangaroa;
+  //   box-shadow: 0 4px 35px rgba($color-tangaroa, 0.15);
+
+  //   & img {
+  //     display: none;
+  //   }
+
+  //   & .catalog__item-desc {
+  //     display: block;
+  //   }
+
+  //   & h3 {
+  //     position: static;
+  //   }
+
+  //   & .catalog__button {
+  //     display: block;
+  //   }
+  // }
 }
 
 .catalog__item-desc {
@@ -164,6 +185,7 @@
   font-weight: 600;
   padding: 9px 20px;
   margin: 0 25px 35px;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;
