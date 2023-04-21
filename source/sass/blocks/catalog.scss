@@ -102,7 +102,7 @@
     }
 
     & .catalog__item-desc {
-      display: block;
+      display: flex;
     }
 
     & h3 {
@@ -116,11 +116,12 @@
 }
 
 .catalog__item-desc {
+  height: 100%;
   display: none;
+  flex-direction: column;
   color: $color-default-white;
   padding: 13px 25px 14px;
   overflow-y: scroll;
-  margin-bottom: auto;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -139,10 +140,7 @@
     font-size: 14px;
     line-height: 20px;
     color: $color-quartz;
-
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
+    margin-bottom: 12px;
   }
 
   @include vp-1023 {
@@ -163,10 +161,15 @@
   line-height: 21px;
   font-weight: 600;
   padding: 9px 20px;
-  margin-bottom: 35px;
+  margin-top: 15px;
+  margin-bottom: 22px;
   user-select: none;
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  @include vp-1023 {
+    margin-top: auto;
   }
 }
