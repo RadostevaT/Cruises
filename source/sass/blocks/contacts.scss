@@ -93,14 +93,22 @@
   flex-direction: row;
   gap: 10px;
 
-  & span,
-  & a {
+  & span {
     font-size: 16px;
     line-height: 24px;
   }
 
   & svg {
     flex-shrink: 0;
+  }
+
+  & a {
+    font-size: 16px;
+    line-height: 24px;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   @include vp-1023 {

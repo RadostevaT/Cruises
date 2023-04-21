@@ -26,7 +26,7 @@
       border: 1px solid $color-default-white;
       outline: none;
 
-      transition: border 0.3s ease;
+      transition: background-color 0.3s ease;
 
       &::placeholder {
         color: rgba($color-tangaroa, 0.7);
@@ -38,7 +38,8 @@
       }
 
       @include hover-focus {
-        border: 1px solid $color-quartz;
+        background-color: $color-quartz;
+        border-color: $color-quartz;
       }
     }
   }
