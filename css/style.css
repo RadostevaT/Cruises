@@ -751,9 +751,9 @@ button,
   padding: 11px 16px;
   border: 1px solid #f9fbfd;
   outline: none;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .custom-input label input::-webkit-input-placeholder,
@@ -799,7 +799,8 @@ button,
 .custom-textarea label input:focus-within,
 .custom-textarea label textarea.focus-visible:focus,
 .custom-textarea label textarea:focus-within {
-  border: 1px solid #d8d8d9;
+  background-color: #d8d8d9;
+  border-color: #d8d8d9;
 }
 
 .custom-input__error,
@@ -1075,7 +1076,6 @@ button,
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 595px;
   width: 100%;
   gap: 10px 33px;
 }
@@ -1356,7 +1356,9 @@ button,
 
 .catalog__item.focus-visible:focus .catalog__item-desc,
 .catalog__item:focus-within .catalog__item-desc {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .catalog__item.focus-visible:focus h3,
@@ -1370,11 +1372,15 @@ button,
 }
 
 .catalog__item-desc {
+  height: 100%;
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   color: #f9fbfd;
   padding: 13px 25px 14px;
   overflow-y: scroll;
-  margin-bottom: auto;
   scrollbar-width: none;
 }
 
@@ -1394,9 +1400,6 @@ button,
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
-}
-
-.catalog__item-desc p:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -1409,7 +1412,8 @@ button,
   line-height: 21px;
   font-weight: 600;
   padding: 9px 20px;
-  margin-bottom: 35px;
+  margin-top: 15px;
+  margin-bottom: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1579,8 +1583,7 @@ button,
   gap: 10px;
 }
 
-.contacts__item span,
-.contacts__item a {
+.contacts__item span {
   font-size: 16px;
   line-height: 24px;
 }
@@ -1588,6 +1591,16 @@ button,
 .contacts__item svg {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+.contacts__item a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contacts__item a.focus-visible:focus,
+.contacts__item a:focus-within {
+  opacity: 0.8;
 }
 
 /* @mixin hover-focus {
@@ -1783,6 +1796,10 @@ button,
 
   .catalog__item-desc {
     padding: 13px 35px 14px;
+  }
+
+  .catalog__button {
+    margin-top: auto;
   }
 
   .form__wrapper {
@@ -2167,7 +2184,8 @@ button,
   .custom-input label textarea:hover:not(.focus-visible),
   .custom-textarea label input:hover:not(.focus-visible),
   .custom-textarea label textarea:hover:not(.focus-visible) {
-    border: 1px solid #d8d8d9;
+    background-color: #d8d8d9;
+    border-color: #d8d8d9;
   }
 
   .custom-toggle:hover:not(.focus-visible) {
@@ -2205,7 +2223,9 @@ button,
   }
 
   .catalog__item:hover:not(.focus-visible) .catalog__item-desc {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .catalog__item:hover:not(.focus-visible) h3 {
@@ -2217,6 +2237,10 @@ button,
   }
 
   .catalog__button:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__item a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }
