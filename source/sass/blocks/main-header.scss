@@ -88,7 +88,7 @@
     margin-top: 75px;
     gap: 10px;
     flex-wrap: nowrap;
-    max-height: 100vh;
+    max-height: calc(100vh - 75px);
     overflow-y: auto;
 
     .is-open & {
