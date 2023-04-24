@@ -1679,7 +1679,6 @@ button,
   }
 
   .main-footer__nav {
-    max-width: 440px;
     margin-left: 25px;
     gap: 10px 23px;
   }
@@ -1998,7 +1997,6 @@ button,
   }
 
   .main-footer__nav {
-    max-width: none;
     margin: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
